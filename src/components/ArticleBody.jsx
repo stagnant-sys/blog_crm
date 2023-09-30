@@ -1,16 +1,13 @@
 const ArticleBody = ({ blogPost }) => {
   return (
     <div className="article_body">
-      <h1>{blogPost.title}</h1>
-      <div className="blogpost_metadata">
-        <p>published by <strong>{blogPost.author.username}</strong> on {blogPost.createdAt_formatted}</p>
-        {
-          blogPost.updatedAt !== blogPost.createdAt ? <p className="blogpost_edit-info">Edited {blogPost.updatedAt_formatted}</p> : null
-        }
-      </div>
-      <div className="article_text">
-        {blogPost.text}
-      </div>
+    <form>
+      <label htmlFor="title">Title: </label>
+      <input id="title" name="title" defaultValue={blogPost.title} />
+      <label htmlFor='text'>Text: </label>
+      <textarea id='text' name='text' defaultValue={blogPost.text} />
+    </form>
+      
     </div>
   )
 }
