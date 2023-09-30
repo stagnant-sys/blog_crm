@@ -32,7 +32,7 @@ const ArticleOverview = ({ blogPost }) => {
       }
       </div>
       <div>{textPreview}</div>
-      <a href={`/post/${blogPost._id}`}>Read full article</a>
+      <a href={`/post/${blogPost._id}`}>Edit article</a>
     </div>
   )
 }
