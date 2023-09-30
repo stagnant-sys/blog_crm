@@ -35,6 +35,7 @@ export const PostsIndex = () => {
 
   return (
     <>
+      <a href='/post/new'>Write new post</a>
       {postsList()}
     </>
   )

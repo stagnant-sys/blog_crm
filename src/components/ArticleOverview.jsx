@@ -8,9 +8,18 @@ const ArticleOverview = ({ blogPost }) => {
 
   const changeVisibility = async () => {
     setLoading(' ...');
-    await fetch(`https://blogapi-production-5dee.up.railway.app/posts/${blogPost._id}/visibility`, { method: 'PUT' });
+    await fetch(`https://blogapi-production-5dee.up.railway.app/posts/${blogPost._id}/visibility`, { method: 'PATCH' });
     visibility === 'public' ? setVisibility('hidden') : setVisibility('public');
     setLoading('');
+  }
+
+  const deleteArticle = async () => {
+    if (window.confirm("Do you really want to delete this article?")) {
+      await fetch(`https://blogapi-production-5dee.up.railway.app/posts/${blogPost._id}/delete`, { method: 'DELETE' });
+      location.reload();
+    } else {
+     return; 
+    }
   }
 
   return (
@@ -33,6 +42,7 @@ const ArticleOverview = ({ blogPost }) => {
       </div>
       <div>{textPreview}</div>
       <a href={`/post/${blogPost._id}`}>Edit article</a>
+      <button onClick={deleteArticle}>Delete article</button>
     </div>
   )
 }
