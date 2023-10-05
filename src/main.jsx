@@ -1,17 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
 
 import { Header } from './components/Header';
-import { PostsIndex } from './pages/PostsIndex';
+import { Homepage } from './pages/HomePage';
 import PostDetail from './pages/PostDetail';
 import { NewPostForm } from './pages/NewPostForm';
+import { Login } from './pages/Login';
 import './index.css'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <PostsIndex />
+    element: <Homepage />
   },
   {
     path: '/post/new',
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: '/post/:id',
     element: <PostDetail />
+  },
+  {
+    path: '/login',
+    element: <Login />
   }
 ])
 
