@@ -1,7 +1,8 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ArticleBody from "../components/ArticleBody";
 import ArticleComments from "../components/ArticleComments";
+import { Header } from "../components/Header";
 
 const PostDetail = () => {
   const [article, setArticle] = useState();
@@ -32,8 +33,17 @@ const PostDetail = () => {
     fetchArticle();
   }, [])
 
+  if (localStorage.role !== 'admin') {
+    return (
+      <div>
+        Access denied, please <Link to='/login'>log in</Link> with an admin account.
+      </div>
+    )
+  }
+
   return (
     <>
+      <Header />
       {fullarticle()}
     </>
   )

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { PostsIndex } from "./PostsIndex"
+import { Header } from "../components/Header"
 
 export const Homepage = () => {
   if (localStorage.role !== 'admin') {
@@ -11,6 +12,9 @@ export const Homepage = () => {
   }
 
   return (
-    <PostsIndex />
+    <>
+      <Header />
+      <PostsIndex />
+    </>
   )
 }

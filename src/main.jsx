@@ -7,6 +7,7 @@ import { Homepage } from './pages/HomePage';
 import PostDetail from './pages/PostDetail';
 import { NewPostForm } from './pages/NewPostForm';
 import { Login } from './pages/Login';
+import { LoggedOut } from './pages/LoggedOut';
 import './index.css'
 
 const router = createBrowserRouter([
@@ -25,12 +26,15 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <Login />
+  },
+  {
+    path: '/logout',
+    element: <LoggedOut />
   }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Header />
     <RouterProvider router={router} />
   </React.StrictMode>,
 )

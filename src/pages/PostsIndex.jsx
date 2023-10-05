@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import ArticleOverview from "../components/ArticleOverview";
-
 
 export const PostsIndex = () => {
   const [allPosts, setAllPosts] = useState();
@@ -33,9 +33,17 @@ export const PostsIndex = () => {
     fetchPosts();
   }, []);
 
+  if (localStorage.role !== 'admin') {
+    return (
+      <div>
+        Access denied, please <Link to='/login'>log in</Link> with an admin account.
+      </div>
+    )
+  }
+
   return (
     <>
-      <a href='/post/new'>Write new post</a>
+      <Link to='/post/new'>Write new post</Link>
       {postsList()}
     </>
   )

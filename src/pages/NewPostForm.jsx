@@ -1,4 +1,5 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { Header } from "../components/Header";
 
 export const NewPostForm = () => {
   const navigateTo = useNavigate();
@@ -19,8 +20,17 @@ export const NewPostForm = () => {
     navigateTo(`/`);
   }
 
+  if (localStorage.role !== 'admin') {
+    return (
+      <div>
+        Access denied, please <Link to='/login'>log in</Link> with an admin account.
+      </div>
+    )
+  }
+
   return (
     <div>
+      <Header />
       <form id='new-post_form' onSubmit={createPost}>
         <div>
           <label htmlFor="title">Title: </label>
