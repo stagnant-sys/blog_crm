@@ -9,7 +9,7 @@ export const NewPostForm = () => {
     const form = document.getElementById('new-post_form');
     const data = {};
     new FormData(form).forEach((value, key) => data[key] = value);
-    console.log(data);
+    data.author = localStorage.user_id;
     await fetch(`https://blogapi-production-5dee.up.railway.app/posts/create`, {
       method: 'POST',
       headers: {
