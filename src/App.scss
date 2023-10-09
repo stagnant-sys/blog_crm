@@ -39,6 +39,8 @@ hr {
 header {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 1;
   border-bottom: 2px solid #40916d;
   box-shadow: 0 2px 4px #40916d9c;
   padding: 24px;

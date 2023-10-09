@@ -36,7 +36,7 @@ export const Header = () => {
   
   return (
     <header className="main-header">
-      <div className="header_logo"><Link to='/'>Scientized</Link> <span>admin dashboard</span></div>
+      <div className="header_logo"><Link to='/'>Scientized</Link> <span style={{color: '#40916d'}}>admin dashboard</span></div>
       <UserContainer />
     </header>
   )

@@ -16,6 +16,7 @@ const ArticleBody = ({ blogPost }) => {
       body: JSON.stringify(data),
     });
     navigateTo(`/post/${blogPost._id}`);
+    location.reload();
   }
 
   return (
