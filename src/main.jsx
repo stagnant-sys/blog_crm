@@ -8,7 +8,7 @@ import PostDetail from './pages/PostDetail';
 import { NewPostForm } from './pages/NewPostForm';
 import { Login } from './pages/Login';
 import { LoggedOut } from './pages/LoggedOut';
-import './index.css'
+import './App.css'
 
 const router = createBrowserRouter([
   {

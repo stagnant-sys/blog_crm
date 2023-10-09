@@ -29,19 +29,21 @@ export const Login = () => {
   }
 
   return (
-    <div>
-      <h2>Log in</h2>
-      <form id='login_form' onSubmit={login}>
-        <div>
-          <label htmlFor="username">Username: </label>
-          <input type='text' id='username' name='username' />
-        </div>
-        <div>
-          <label htmlFor="password">Password :</label>
-          <input type='password' id='password' name='password'/>
-        </div>
-        <button type='submit'>Login</button>
-      </form>
+    <div className="login_page">
+      <div className="login_container">
+        <h2>Log in</h2>
+        <form id='login_form' onSubmit={login}>
+          <div>
+            <label htmlFor="username">Username: </label>
+            <input type='text' id='username' name='username' />
+          </div>
+          <div>
+            <label htmlFor="password">Password :</label>
+            <input type='password' id='password' name='password'/>
+          </div>
+          <button type='submit'>Login</button>
+        </form>
+      </div>
     </div>
   )
 }

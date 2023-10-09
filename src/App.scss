@@ -1,60 +1,84 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Young+Serif&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Young+Serif&display=swap');
+
 * {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
   color: #333333;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .access-denied_container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; }
-  .access-denied_container .access-denied_logo {
+  height: 100vh;
+
+  .access-denied_logo {
     font-family: 'Young Serif', sans-serif;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 16px; 
     font-size: 2rem;
-    margin-bottom: 32px; }
-  .access-denied_container .access-denied_alert {
+    margin-bottom: 32px;
+  }
+
+  .access-denied_alert {
     font-size: 1.5rem;
     color: #a3302c;
     font-weight: 700;
-    margin-bottom: 16px; }
+    margin-bottom: 16px;
+  }
+}
 
 header {
   display: flex;
   justify-content: space-between;
   border-bottom: 2px solid #40916d;
   box-shadow: 0 2px 4px #40916d9c;
-  padding: 24px; }
-  header button {
-    padding: 4px; }
-    header button:hover, header button:active {
-      cursor: pointer; }
-  header .header_logo {
+  padding: 24px;
+
+  button {
+    padding: 4px;
+  
+    &:hover,
+    &:active {
+      cursor: pointer;
+    }
+  }
+
+  .header_logo {
     font-family: 'Young Serif', sans-serif;
     display: flex;
     align-items: center;
-    gap: 16px; }
-    header .header_logo a {
+    gap: 16px;
+  
+    a {
       font-family: inherit;
       font-size: 2rem;
       text-decoration: none;
       color: #333333;
-      transition: text-shadow 0.2s; }
-      header .header_logo a:hover, header .header_logo a:active {
-        text-shadow: 0 0 16px #40916d9c; }
-  header .header_user-container {
+      transition: text-shadow 0.2s;
+
+      &:hover,
+      &:active {
+        text-shadow: 0 0 16px #40916d9c;
+      }
+    }
+  }
+
+  .header_user-container {
     display: flex;
     align-items: center;
     gap: 16px;
-    font-size: 0.9rem; }
-    header .header_user-container a {
-      text-decoration: none; }
+    font-size: 0.9rem;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
 
 .button_primary {
   background-color: #40916d;
@@ -62,16 +86,24 @@ header {
   border-radius: 4px;
   border: 2px solid #40916d;
   color: #ffffff;
-  font-size: 1rem; }
-  .button_primary:hover, .button_primary:active {
+  font-size: 1rem;
+
+  &:hover,
+  &:active {
     background-color: #ffffff;
     color: #40916d;
-    cursor: pointer; }
-    .button_primary:hover a, .button_primary:active a {
-      color: #40916d; }
-  .button_primary a {
+    cursor: pointer;
+
+    a {
+      color: #40916d;
+    }
+  }
+  
+  a {
     color: #ffffff;
-    font-size: 1rem; }
+    font-size: 1rem;
+  }
+}
 
 .button_secondary {
   background-color: #ffffff;
@@ -79,9 +111,13 @@ header {
   padding: 8px 16px;
   border-radius: 4px;
   border: 1px solid #40916d;
-  font-size: 1rem; }
-  .button_secondary:hover, .button_secondary:active {
-    background-color: #ebebeb; }
+  font-size: 1rem;
+
+  &:hover,
+  &:active {
+    background-color: #ebebeb;
+  }
+}
 
 .button_delete {
   display: flex;
@@ -89,19 +125,24 @@ header {
   align-items: center;
   padding: 4px;
   border: 1px solid #333333;
-  border-radius: 2px; }
-  .button_delete:hover, .button_delete:active {
+  border-radius: 2px;
+
+  &:hover,
+  &:active {
     background-color: #d9544fb4;
-    cursor: pointer; }
-  .button_delete img {
+    cursor: pointer;
+  }
+  
+  img {
     height: 16px;
-    width: 16px; }
+    width: 16px;
+  }
+}
 
 .login_page {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100vw; }
-
-/*# sourceMappingURL=App.css.map */
+  width: 100vw;
+}
