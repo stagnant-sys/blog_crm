@@ -33,7 +33,7 @@ const ArticleComments = ({ comments }) => {
   if (!comments.length) {
     return (
       <div>
-        No comments(yet)...
+        No comments (yet)...
       </div>
     )
   } else {
