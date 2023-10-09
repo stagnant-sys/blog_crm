@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const ArticleOverview = ({ blogPost }) => {
   const [visibility, setVisibility] = useState(blogPost.visibility);
@@ -23,26 +24,32 @@ const ArticleOverview = ({ blogPost }) => {
   }
 
   return (
-    <div className='blogpost_overview'>
-      <h2>{blogPost.title}</h2>
-      <div className="post-visibility_container">
-        <p>Visibility : 
-          {
-            visibility === 'public' ? <span style={{color: 'green',}}> public</span> : <span style={{color: 'red'}}> hidden</span>
-          }
-          <span>{loading}</span>
-        </p>
-        <button onClick={changeVisibility}>↻</button>
-      </div>
+    <div className='post-overview'>
+      <h2 className="post-overview_title">{blogPost.title}</h2>
       
-      <div className="blogpost_metadata">published by <strong>{blogPost.author.username}</strong> on {blogPost.createdAt_formatted}
+      
+      <div className="post-overview_metadata">published by <strong>{blogPost.author.username}</strong> on {blogPost.createdAt_formatted}
       {
-        blogPost.updatedAt !== blogPost.createdAt ? <p className="blogpost_edit-info">Edited {blogPost.updatedAt_formatted}</p> : null
+        blogPost.updatedAt !== blogPost.createdAt ? <p className="post-overview_updated">Edited {blogPost.updatedAt_formatted}</p> : null
       }
       </div>
-      <div>{textPreview}</div>
-      <a href={`/post/${blogPost._id}`}>Edit article</a>
-      <button onClick={deleteArticle}>Delete article</button>
+      <div className="post-overview_text">{textPreview}</div>
+      <div className="post-overview_actions">
+        <div className="post-visibility_container">
+          <p>Visibility : 
+            {
+              visibility === 'public' ? <span style={{color: 'green',}}> public</span> : <span style={{color: 'red'}}> hidden</span>
+            }
+            <span>{loading}</span>
+          </p>
+          <button onClick={changeVisibility}>↻</button>
+        </div>
+        <div className="actions">
+          <button className="action_edit"><Link to={`/post/${blogPost._id}`}>Edit article</Link></button>
+          <button onClick={deleteArticle} className="action_delete">Delete article</button>
+        </div>
+      </div>
+      
     </div>
   )
 }

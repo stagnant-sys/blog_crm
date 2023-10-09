@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 32px; }
   .access-denied_container .access-denied_alert {
     font-size: 1.5rem;
@@ -55,6 +55,11 @@ header {
     font-size: 0.9rem; }
     header .header_user-container a {
       text-decoration: none; }
+
+main {
+  min-height: 100vh;
+  padding: 64px 20vw;
+  background-color: #fcfcfc; }
 
 .button_primary {
   background-color: #40916d;
@@ -103,5 +108,119 @@ header {
   align-items: center;
   height: 100vh;
   width: 100vw; }
+  .login_page .login_container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; }
+  .login_page #login_form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; }
+
+.homepage h3 {
+  text-align: center;
+  margin-bottom: 32px; }
+
+.homepage_actions {
+  display: flex;
+  justify-content: center;
+  gap: 32px; }
+  .homepage_actions a {
+    background-color: #ebebeb;
+    border: 1px solid #40916d;
+    border-radius: 4px;
+    padding: 32px;
+    text-decoration: none;
+    box-shadow: 2px 2px 4px #40916dc2; }
+    .homepage_actions a:hover {
+      background-color: #40916d;
+      color: #ffffff; }
+    .homepage_actions a:active {
+      transform: translateY(2px); }
+
+.post-overview {
+  border: 2px solid #ebebeb;
+  border-left: 8px solid #40916d;
+  border-radius: 4px;
+  padding: 24px;
+  margin: 24px 0;
+  box-shadow: 2px 2px 4px #33333388; }
+  .post-overview:hover, .post-overview:active {
+    background-color: #ebebeb; }
+  .post-overview .post-overview_title {
+    font-family: 'Young Serif', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-bottom: 8px; }
+  .post-overview .post-overview_metadata, .post-overview strong {
+    color: #adadad;
+    font-size: 0.9rem;
+    margin-bottom: 16px; }
+  .post-overview .post-overview_updated {
+    color: #adadad;
+    font-size: 0.9rem;
+    font-style: italic; }
+  .post-overview .post-overview_text {
+    margin-bottom: 8px; }
+  .post-overview .post-overview_actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #cdcdcd;
+    padding: 4px; }
+    .post-overview .post-overview_actions .actions {
+      display: flex;
+      gap: 8px; }
+      .post-overview .post-overview_actions .actions .action_edit {
+        padding: 4px;
+        background-color: #40916d;
+        border: 1px solid #000000;
+        border-radius: 2px; }
+        .post-overview .post-overview_actions .actions .action_edit:hover, .post-overview .post-overview_actions .actions .action_edit:active {
+          background-color: #246e48; }
+        .post-overview .post-overview_actions .actions .action_edit a {
+          padding: 4px 8px;
+          text-decoration: none;
+          color: #ffffff;
+          font-weight: 700; }
+      .post-overview .post-overview_actions .actions .action_delete {
+        background-color: #d9544f;
+        border: 1px solid #000000;
+        border-radius: 2px;
+        color: #ffffff; }
+        .post-overview .post-overview_actions .actions .action_delete:hover, .post-overview .post-overview_actions .actions .action_delete:active {
+          background-color: #a3302c; }
+      .post-overview .post-overview_actions .actions button {
+        padding: 4px; }
+        .post-overview .post-overview_actions .actions button:hover, .post-overview .post-overview_actions .actions button:active {
+          cursor: pointer; }
+  .post-overview .post-visibility_container {
+    display: flex;
+    align-items: center;
+    gap: 8px; }
+    .post-overview .post-visibility_container button {
+      padding: 4px; }
+      .post-overview .post-visibility_container button:hover, .post-overview .post-visibility_container button:active {
+        cursor: pointer; }
+
+#new-post_form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; }
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px; }
+  .input-group label {
+    font-weight: 700;
+    font-size: 1.2rem; }
+  .input-group input {
+    padding: 8px;
+    font-size: 1.1rem; }
+  .input-group textarea {
+    padding: 8px;
+    height: 200px;
+    font-size: 1rem; }
 
 /*# sourceMappingURL=App.css.map */

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ArticleOverview from "../components/ArticleOverview";
+import { Header } from "../components/Header";
 
 export const PostsIndex = () => {
   const [allPosts, setAllPosts] = useState();
@@ -43,8 +44,11 @@ export const PostsIndex = () => {
 
   return (
     <>
-      <Link to='/post/new'>Write new post</Link>
-      {postsList()}
+      <Header />
+      <main>
+        <h3>Articles list:</h3>
+        {postsList()}
+      </main>
     </>
   )
 

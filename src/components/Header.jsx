@@ -8,6 +8,7 @@ const UserContainer = () => {
     if (window.confirm('Do you really want to log out ?')) {
       localStorage.clear();
       navigateTo('/');
+      location.reload();
     } else {
       return;
     }

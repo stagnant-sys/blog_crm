@@ -29,26 +29,29 @@ export const NewPostForm = () => {
   }
 
   return (
-    <div>
+    <>
       <Header />
-      <form id='new-post_form' onSubmit={createPost}>
-        <div>
-          <label htmlFor="title">Title: </label>
-          <input id='title' name='title' />
-        </div>
-        <div>
-          <label htmlFor="text">Text: </label>
-          <textarea id='text' name='text' />
-        </div>
-        <div>
-          <label htmlFor="visibility">Visibility: </label>
-          <select id='visibility' name='visibility'>
-            <option value='hidden'>Hidden</option>
-            <option value='public'>Public</option>
-          </select>
-        </div>
-        <button type='submit'>Create post</button>
-      </form>
-    </div>
+      <main>
+        <form id='new-post_form' onSubmit={createPost}>
+          <div className="input-group">
+            <label htmlFor="title">Title: </label>
+            <input id='title' name='title' />
+          </div>
+          <div className="input-group">
+            <label htmlFor="text">Text: </label>
+            <textarea id='text' name='text' />
+          </div>
+          <div>
+            <label htmlFor="visibility">Visibility: </label>
+            <select id='visibility' name='visibility'>
+              <option value='hidden'>Hidden</option>
+              <option value='public'>Public</option>
+            </select>
+          </div>
+          <button type='submit' className="button_primary">Create post</button>
+        </form>
+      </main>
+      
+    </>
   )
 }
