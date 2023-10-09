@@ -21,11 +21,16 @@ const ArticleBody = ({ blogPost }) => {
   return (
     <div className="article_body">
     <form id='edit_form' method="" onSubmit={submitForm}>
-      <label htmlFor="title">Title: </label>
-      <input id="title" name="title" defaultValue={blogPost.title} />
-      <label htmlFor='text'>Text: </label>
-      <textarea id='text' name='text' defaultValue={blogPost.text} />
-      <button type='submit'>Submit edit</button>
+      <div className="input-group">
+        <label htmlFor="title">Title: </label>
+        <input id="title" name="title" defaultValue={blogPost.title} />
+      </div>
+      <div className="input-group">
+        <label htmlFor='text'>Text: </label>
+        <textarea id='text' name='text' defaultValue={blogPost.text} />
+      </div>
+
+      <button type='submit' className="button_primary">Submit edit</button>
     </form>
       
     </div>

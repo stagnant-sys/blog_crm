@@ -8,7 +8,7 @@ const ArticleOverview = ({ blogPost }) => {
   const textPreview = blogPost.text.substring(0, 200).trim() + '...';
 
   const changeVisibility = async () => {
-    setLoading(' ...');
+    setLoading('...');
     await fetch(`https://blogapi-production-5dee.up.railway.app/posts/${blogPost._id}/visibility`, { method: 'PUT' });
     visibility === 'public' ? setVisibility('hidden') : setVisibility('public');
     setLoading('');

@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+hr {
+  margin: 64px 0;
+}
+
 .access-denied_container {
   display: flex;
   flex-direction: column;
@@ -326,5 +330,37 @@ main {
     padding: 8px;
     height: 200px;
     font-size: 1rem;
+  }
+}
+
+.individual-comment_container {
+  border-bottom: 1px solid #33333374;
+  border-left: 1px solid #33333374;
+  margin: 16px 0;
+  padding: 8px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+
+  &:nth-child(even) {
+    background-color: #f5f5f5bc;
+  }
+
+  .individual-comment_metadata {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .comment_author {
+    font-weight: 700;
+  }
+
+  .comment_date {
+    color: #707070;
+  }
+
+  .individual-comment_text {
+    margin-top: 4px;
+    font-size: 0.9rem;
   }
 }

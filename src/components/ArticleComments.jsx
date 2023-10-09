@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import deleteIcon from '../assets/delete.png'
 
 const IndividualComment = ({ comment }) => {
   const navigateTo = useNavigate();
@@ -18,10 +19,12 @@ const IndividualComment = ({ comment }) => {
 
   return (
     <div className="individual-comment_container">
-      <p>{comment.author.username}</p>
-      <p>{comment.text}</p>
-      <p>{comment.createdAt_formatted}</p>
-      <button onClick={deleteComment}>Delete comment</button>
+      <div className="individual-comment_metadata">
+        <span className="comment_author">{comment.author.username}</span> 
+        <span className="comment_date">{comment.createdAt_formatted}</span>
+        <button onClick={deleteComment} className="button_delete"><img src={deleteIcon} alt='' title='Delete comment' /></button>
+      </div>
+      <div className="individual-comment_text">{comment.text}</div>
     </div>
   )
 }
@@ -36,6 +39,7 @@ const ArticleComments = ({ comments }) => {
   } else {
     return (
       <div className="comments_container">
+        <h3>Edit comments:</h3>
         {
           comments.map((el) => {
             return (

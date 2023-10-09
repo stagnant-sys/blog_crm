@@ -22,6 +22,7 @@ const PostDetail = () => {
       return (
         <>
           <ArticleBody blogPost={article.post} />
+          <hr />
           <ArticleComments comments={article.comments} />
         </>
         
@@ -44,7 +45,9 @@ const PostDetail = () => {
   return (
     <>
       <Header />
-      {fullarticle()}
+      <main>
+        {fullarticle()}
+      </main>
     </>
   )
 }
